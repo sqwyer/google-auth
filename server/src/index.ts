@@ -26,7 +26,6 @@ app.set('views', `${cwd}/client/pages`);
 app.use(GoogleRouter);
 
 app.get('/', protect, (req, res) => {
-    console.log(req.user);
     res.render('dashboard', {user: req.user});
 });
 
