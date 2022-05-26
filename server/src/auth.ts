@@ -11,7 +11,6 @@ passport.use(new Strategy({
     passReqToCallback: true,
 },
 function(request, accessToken, refreshToken, profile, done) {
-    // find or create mongoose user here
     return done(null, profile);
 }));
 
