@@ -7,7 +7,7 @@ if(process.env.NODE_ENV != 'production') config();
 passport.use(new Strategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/callback",
+    callbackURL: process.env.GOOGLE_CLIENT_REDIRECT,
     passReqToCallback: true,
 },
 function(request, accessToken, refreshToken, profile, done) {
